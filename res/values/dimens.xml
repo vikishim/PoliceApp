@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    
+    <!-- Login -->
+    <dimen name="login_logo_margin_top">50dp</dimen>
+    <dimen name="login_input_txt_width">200dp</dimen>
+    <dimen name="login_input_margin_top">20dp</dimen>
+    <dimen name="login_input_margin_left">40dp</dimen>
+    
+    <!-- Footer -->
+    <dimen name="footer_txt_size">20dp</dimen>
+    <dimen name="footer_margin_bottom">50dp</dimen>
+    
+    <!-- Title Bar -->
+    <dimen name="titlebar_height">30dp</dimen>
+    <dimen name="titlebar_btn_margin_left">10dp</dimen>
+    
+    <!-- Main Menu -->
+    <dimen name="main_menu_logo_margin_top">50dp</dimen>
+    <dimen name="main_menu_gridview_margin_top">30dp</dimen>
+    <dimen name="main_menu_content_width">300dp</dimen>
+    <dimen name="main_menu_content_column_width">75dp</dimen>
+    <dimen name="main_menu_content_horizontal_pacing">37.5dp</dimen>
+    <dimen name="main_menu_content_vertical_pacing">20dp</dimen>
+
+</resources>

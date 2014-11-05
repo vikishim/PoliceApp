@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin" >
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/login_logo_margin_top"
+        android:background="@color/trans"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_launcher" />
+
+    <LinearLayout
+        android:layout_width="@dimen/login_input_txt_width"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/logo"
+        android:layout_marginLeft="@dimen/login_input_margin_left"
+        android:layout_marginStart="@dimen/login_input_margin_left" >
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_input_margin_top"
+            android:hint="@string/login_username_hint" />
+        
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_input_margin_top"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword" />
+        
+        <CheckBox android:id="@+id/remember_me"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/login_input_margin_top"
+            android:text="@string/login_remember_chk_txt" />
+        
+        <LinearLayout android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1.0"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/login_input_margin_top" >
+            
+            <Button android:id="@+id/login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/login_login_btn_txt" />
+            
+            <Button android:id="@+id/regist"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:text="@string/login_regist_btn_txt" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footer" />
+
+</RelativeLayout>

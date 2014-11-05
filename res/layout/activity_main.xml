@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin" >
+
+    <include
+        android:id="@+id/titlebar"
+        layout="@layout/titlebar" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlebar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/main_menu_logo_margin_top"
+        android:background="@color/trans"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_launcher" />
+
+    <GridView
+        android:id="@+id/grid_view"
+        android:layout_width="@dimen/main_menu_content_width"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/logo"
+        android:layout_marginTop="@dimen/main_menu_gridview_margin_top"
+        android:columnWidth="@dimen/main_menu_content_column_width"
+        android:gravity="center"
+        android:horizontalSpacing="@dimen/main_menu_content_horizontal_pacing"
+        android:numColumns="3"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="@dimen/main_menu_content_vertical_pacing" />
+
+    <include
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/footer" />
+
+</RelativeLayout>

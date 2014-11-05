@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.policeapp.common.DefaultTitleBar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/titlebar_height"
+    android:layout_alignParentTop="true"
+    android:background="@drawable/title_bar"
+    android:orientation="horizontal" >
+
+    <ImageButton
+        android:id="@+id/titlebar_leftview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/trans"
+        android:paddingLeft="@dimen/titlebar_btn_margin_left"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:id="@+id/titlebar_centerview"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true" >
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/titlebar_rightview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:background="#00000000"
+        android:paddingRight="@dimen/titlebar_btn_margin_left"
+        android:src="@drawable/next" />
+
+</com.example.policeapp.common.DefaultTitleBar>
