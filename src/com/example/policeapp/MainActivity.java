@@ -11,9 +11,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.policeapp.common.ImageUtil;
 import com.example.policeapp.common.TitleBar;
 import com.example.policeapp.view.MenuGridView;
+import com.readystatesoftware.viewbadger.BadgeView;
 
 public class MainActivity extends Activity {
 
@@ -76,17 +76,15 @@ public class MainActivity extends Activity {
 			} else {
 				holder = (ViewHolder) convertView.getTag();
 			}
-			if (1 == position) {
-				ImageUtil imgUtil = ImageUtil.getInstance();
-				imgUtil.setContext(mContext);
-				holder.img.setImageBitmap(imgUtil.drawCountIcon(
-						imgUtil.drawableToBitmap(getResources().getDrawable(
-								mImageIds[position])), mPendingCount));
-			} else {
-				holder.img.setImageResource(mImageIds[position]);
-			}
+			holder.img.setImageResource(mImageIds[position]);
 			holder.label.setText(mLabelIds[position]);
 			holder.img.setOnClickListener(new ImgBtnClickListener(position));
+			if (1 == position) {
+				BadgeView badge = new BadgeView(mContext, holder.img);
+				badge.setText(""+mPendingCount);
+				badge.setBadgePosition(BadgeView.POSITION_TOP_RIGHT);
+				badge.toggle();
+			}
 			return convertView;
 		}
 
