@@ -22,5 +22,8 @@
     <string name="mani_menu_label_finish_txt">已办事项</string>
     <string name="mani_menu_label_setting_txt">系统设置</string>
     <string name="mani_menu_label_exit_txt">退出系统</string>
+    
+    <!-- Survey -->
+    <string name="site_survey_record_title">踏勘人意见：</string>
 
 </resources>

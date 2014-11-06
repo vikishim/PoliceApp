@@ -2,6 +2,7 @@ package com.example.policeapp;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.policeapp.common.TitleBar;
+import com.example.policeapp.pending.SurveyActivity;
 import com.example.policeapp.view.MenuGridView;
 import com.readystatesoftware.viewbadger.BadgeView;
 
@@ -81,7 +83,7 @@ public class MainActivity extends Activity {
 			holder.img.setOnClickListener(new ImgBtnClickListener(position));
 			if (1 == position) {
 				BadgeView badge = new BadgeView(mContext, holder.img);
-				badge.setText(""+mPendingCount);
+				badge.setText("" + mPendingCount);
 				badge.setBadgePosition(BadgeView.POSITION_TOP_RIGHT);
 				badge.toggle();
 			}
@@ -98,8 +100,13 @@ public class MainActivity extends Activity {
 
 			@Override
 			public void onClick(View v) {
-				Toast.makeText(mContext, "" + mPosition, Toast.LENGTH_SHORT)
-						.show();
+				switch (mPosition) {
+				case 1:
+					startActivity(new Intent(MainActivity.this, SurveyActivity.class));
+					break;
+				default:
+					break;
+				}
 			}
 		}
 

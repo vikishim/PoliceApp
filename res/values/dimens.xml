@@ -25,5 +25,12 @@
     <dimen name="main_menu_content_column_width">75dp</dimen>
     <dimen name="main_menu_content_horizontal_pacing">37.5dp</dimen>
     <dimen name="main_menu_content_vertical_pacing">20dp</dimen>
+    
+    <!-- Survey -->
+    <dimen name="site_survey_padding_side">20dp</dimen>
+    <dimen name="site_survey_padding_top">10dp</dimen>
+    <dimen name="site_survey_padding_bottom">50dp</dimen>
+    <dimen name="site_survey_main_item_margin_bottom">15dp</dimen>
+    <dimen name="site_survey_survey_margin_top">10dp</dimen>
 
 </resources>
