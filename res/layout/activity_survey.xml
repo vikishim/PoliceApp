@@ -46,17 +46,30 @@
                     android:gravity="start" >
 
                     <EditText
-                        android:id="@+id/et_feedback"
+                        android:id="@+id/survey_edit"
                         android:layout_width="fill_parent"
                         android:layout_height="fill_parent"
                         android:layout_gravity="top|start"
                         android:clickable="true"
                         android:gravity="top|start"
+                        android:hint="@null"
                         android:singleLine="false"
                         android:text="asdasdadadasdasdadadaashdsadahsjkdhajksdhajkhsdkashdkajhkjdhajkshdjkashdkajdhkahsjkhakjdhajkshdjkahdjkahsdjkahjkdahkdhakjdhakhdkajhdajkhdjkahdjkahdjskahdkahdjkahjkdhsakhdajkhdaskshdasjkhdakhdakhadjkdshajkhdajkhdskajhdkahdkj" />
                 </LinearLayout>
             </com.example.policeapp.view.ScrollviewEdit>
         </LinearLayout>
+
+        <com.example.policeapp.view.MenuGridView
+            android:id="@+id/grid_view"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/site_survey_main_item_margin_bottom"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:horizontalSpacing="@dimen/site_survey_img_horizontal_pacing"
+            android:numColumns="4"
+            android:stretchMode="spacingWidthUniform"
+            android:verticalSpacing="@dimen/site_survey_img_vertical_pacing" />
     </LinearLayout>
 
 </LinearLayout>

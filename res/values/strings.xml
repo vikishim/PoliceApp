@@ -24,6 +24,8 @@
     <string name="mani_menu_label_exit_txt">退出系统</string>
     
     <!-- Survey -->
+    <string name="titlebar_left_btn_txt">取消</string>
+    <string name="titlebar_right_btn_txt">保存</string>
     <string name="site_survey_record_title">踏勘人意见：</string>
 
 </resources>

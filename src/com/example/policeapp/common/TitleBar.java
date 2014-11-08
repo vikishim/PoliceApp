@@ -1,22 +1,28 @@
 package com.example.policeapp.common;
 
-import com.example.policeapp.R;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.policeapp.R;
+
 public class TitleBar extends RelativeLayout implements OnClickListener {
 
+	private Context mContext;
 	private View mLeftView;
 	private View mRightView;
 	private TextView mCenterView;
 
 	public TitleBar(Context context, AttributeSet attrs) {
 		super(context, attrs);
+		this.mContext = context;
 	}
 
 	@Override
@@ -49,6 +55,19 @@ public class TitleBar extends RelativeLayout implements OnClickListener {
 			addView(mLeftView, layout);
 		}
 	}
+	
+	public void setLeftTxt(CharSequence txt) {
+		Button btn = new Button(mContext);
+		btn.setText(txt);
+		btn.setBackgroundResource(R.drawable.titlebar_button_bg);
+		btn.setGravity(Gravity.CENTER);
+		btn.setPadding(20, 2, 20, 2);
+		setLeftView(btn);
+	}
+	
+	public void setLeftTxt(int resid) {
+		setLeftTxt(mContext.getString(resid));
+	}
 
 	public void setRightView(View view) {
 		removeView(mRightView);
@@ -60,6 +79,19 @@ public class TitleBar extends RelativeLayout implements OnClickListener {
 			layout.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
 			addView(mRightView, layout);
 		}
+	}
+	
+	public void setRightTxt(CharSequence txt) {
+		Button btn = new Button(mContext);
+		btn.setText(txt);
+		btn.setBackgroundResource(R.drawable.titlebar_button_bg);
+		btn.setGravity(Gravity.CENTER);
+		btn.setPadding(20, 2, 20, 2);
+		setRightView(btn);
+	}
+	
+	public void setRightTxt(int resid) {
+		setRightTxt(mContext.getString(resid));
 	}
 
 	public View getLeftView() {
